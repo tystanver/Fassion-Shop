@@ -14,15 +14,15 @@ const RecentlyUploaded = () => {
   const [updatedProductid,setupdatedProductId]=useState(null)
   const [open,setOpen]=useState(false)
 
-  const validationSchema = Yup.object({
-    name: Yup.string()
-      .max(20, 'Name must be at most 20 characters')
-      .required('Name is required'),
-    description: Yup.string().required('Description is required'),
-      // .max(200, 'Description must be at most 200 characters')
+  // const validationSchema = Yup.object({
+  //   name: Yup.string()
+  //     .max(20, 'Name must be at most 20 characters')
+  //     .required('Name is required'),
+  //   description: Yup.string().required('Description is required'),
+  //     // .max(200, 'Description must be at most 200 characters')
       
-  });
-  const { mutateAsync } = useUpdateProductData(updatedProductid);
+  // });
+  // const { mutateAsync } = useUpdateProductData(updatedProductid);
   const handleClose = () => {
     setOpen(false); // Close the Snackbar
   };
@@ -40,7 +40,7 @@ const RecentlyUploaded = () => {
       price:
 "",      description: "",
     },
-    validationSchema,
+    // validationSchema,
     onSubmit: async (data) => {
       try {
         // console.log(data)
