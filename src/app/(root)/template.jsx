@@ -1,0 +1,19 @@
+import Footer from "../components/footer/Footer";
+import Navbar from "../components/navbar/Navbar";
+
+
+
+
+
+const Template = ({ children }) => {
+  return (
+    <>
+      <Navbar/>
+      {children}
+      <Footer/>
+   
+    </>
+  );
+};
+
+export default Template;
